@@ -1,5 +1,5 @@
 {
-    "name": "kimoetch/Dera-Socialite",
+    "name": "kimoetch/dera-socialite",
     "description": "Dera Socialite OAuth2 Provider for Laravel Socialite",
     "keywords": [
         "laravel",

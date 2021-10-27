@@ -1,0 +1,33 @@
+{
+    "name": "kimoetch/Dera-Socialite",
+    "description": "Dera Socialite OAuth2 Provider for Laravel Socialite",
+    "keywords": [
+        "laravel",
+        "oauth",
+        "provider",
+        "DeraSocialite",
+        "socialite"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kamal Alomari",
+            "email": "kmal.alomari@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "ext-json": "*",
+        "kimoetch/manager": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "kimoetch\\DeraSocialite\\": ""
+        }
+    },
+    "support": {
+        "issues": "https://github.com/kimoetch/providers/issues",
+        "source": "https://github.com/kimoetch/providers",
+        "docs": "https://kimoetch.com/DeraSocialite"
+    }
+}

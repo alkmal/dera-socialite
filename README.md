@@ -1,7 +1,7 @@
 # DeraSocialite
 
 ```bash
-composer require kimoetch/DeraSocialite
+composer require kimoetch/dera-socialite
 ```
 
 ## Installation & Basic Usage

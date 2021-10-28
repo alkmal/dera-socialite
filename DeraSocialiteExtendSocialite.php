@@ -13,6 +13,6 @@ class DeraSocialiteExtendSocialite
      */
     public function handle(SocialiteWasCalled $socialiteWasCalled)
     {
-        $socialiteWasCalled->extendSocialite('DeraSocialite', Provider::class);
+        $socialiteWasCalled->extendSocialite('dera', Provider::class);
     }
 }

@@ -2,7 +2,7 @@
 
 namespace kimoetch\DeraSocialite;
 
-use kimoetch\Manager\SocialiteWasCalled;
+use SocialiteProviders\Manager\SocialiteWasCalled;
 
 class DeraSocialiteExtendSocialite
 {

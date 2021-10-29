@@ -18,7 +18,7 @@ class Provider extends AbstractProvider
      * {@inheritdoc}
      */
     protected $scopes = [
-        'http://accounts.shieldit.sa/api/user',
+        'http://accounts.shieldit.sa/api/profile',
     ];
 
     /**
@@ -47,9 +47,9 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://accounts.shieldit.sa/v1/profile?', [
+        $response = $this->getHttpClient()->get('https://accounts.shieldit.sa/api/profile?', [
             RequestOptions::QUERY => [
-                RequestOptions::QUERY => '{me{externalId displayName bitmoji{avatar id}}}',
+//                RequestOptions::QUERY => '{me{externalId displayName bitmoji{avatar id}}}',
             ],
             RequestOptions::HEADERS => [
                 'Authorization' => 'Bearer '.$token,
@@ -65,9 +65,10 @@ class Provider extends AbstractProvider
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => Arr::get($user, 'data.user.id'),
-            'name'     => Arr::get($user, 'data.user.name'),
-            'avatar'   => Arr::get($user, 'data.user.avatar'),
+            'id'       => Arr::get($user, 'id'),
+            'name'     => Arr::get($user, 'name'),
+            'email'     => Arr::get($user, 'email'),
+            'avatar'   => Arr::get($user, 'avatar'),
         ]);
     }
 

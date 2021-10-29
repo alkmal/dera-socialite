@@ -26,7 +26,7 @@ Add the event to your `listen[]` array in `app/Providers/EventServiceProvider`. 
 
 ```php
 protected $listen = [
-    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+    \kimoetch\Manager\SocialiteWasCalled::class => [
         // ... other providers
         \kimoetch\DeraSocialite\DeraSocialiteExtendSocialite::class.'@handle',
     ],
@@ -38,7 +38,7 @@ protected $listen = [
 You should now be able to use the provider like you would regularly use Socialite (assuming you have the facade installed):
 
 ```php
-return Socialite::driver('dera')->redirect();
+return Socialite::driver('DeraSocialite')->redirect();
 ```
 
 ### Returned User fields

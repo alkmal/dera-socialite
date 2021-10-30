@@ -26,7 +26,7 @@ Add the event to your `listen[]` array in `app/Providers/EventServiceProvider`. 
 
 ```php
 protected $listen = [
-    \kimoetch\Manager\SocialiteWasCalled::class => [
+    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
         // ... other providers
         \kimoetch\DeraSocialite\DeraSocialiteExtendSocialite::class.'@handle',
     ],

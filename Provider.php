@@ -31,7 +31,7 @@ class Provider extends AbstractProvider
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://accounts.shieldit.sa/api/login', $state);
+        return $this->buildAuthUrlFromBase(env('DeraSocialite_ACCOUNTS_URL').'/api/login', $state);
     }
 
     /**
@@ -47,7 +47,7 @@ class Provider extends AbstractProvider
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://accounts.shieldit.sa/api/profile?', [
+        $response = $this->getHttpClient()->get(env('DeraSocialite_ACCOUNTS_URL').'/api/profile?', [
             RequestOptions::QUERY => [
 //                RequestOptions::QUERY => '{me{externalId displayName bitmoji{avatar id}}}',
             ],

@@ -21,6 +21,12 @@ class Provider extends AbstractProvider
         'http://accounts.shieldit.sa/api/profile',
     ];
 
+
+    public function __construct() {
+        $this->scopes = env('DeraSocialite_ACCOUNTS_URL').'/api/profile';
+    }
+
+
     /**
      * {@inheritdoc}
      */
@@ -39,7 +45,7 @@ class Provider extends AbstractProvider
      */
     protected function getTokenUrl()
     {
-        return 'https://accounts.shieldit.sa/api/token';
+        return env('DeraSocialite_ACCOUNTS_URL').'/api/token';
     }
 
     /**

@@ -18,14 +18,8 @@ class Provider extends AbstractProvider
      * {@inheritdoc}
      */
     protected $scopes = [
-        'http://accounts.shieldit.sa/api/profile',
+        ' ',
     ];
-
-
-    public function __construct() {
-        $this->scopes = env('DeraSocialite_ACCOUNTS_URL').'/api/profile';
-    }
-
 
     /**
      * {@inheritdoc}
